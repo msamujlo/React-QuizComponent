@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import QuizQuestionButton from "./QuizQuestionButton";
 
 class QuizQuestion extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <main>
@@ -14,8 +10,8 @@ class QuizQuestion extends Component {
         </section>
         <section className="buttons">
           <ul>
-            {this.props.quiz_question.answer_options.map((answer,index)=>{
-              return <QuizQuestionButton key={index} button_text={answer}></QuizQuestionButton>;
+            {this.props.quiz_question.answer_options.map((answer, index) => {
+              return <QuizQuestionButton key={index} button_text={answer} />;
             })}
           </ul>
         </section>
